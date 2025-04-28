@@ -14,7 +14,9 @@ jobs:
       run: ls -ltra
 
     - name: Run script
-      run: ./ascii-script.sh
+      run: |
+        chmod +x ascii-script.sh  
+        ./ascii-script.sh
 
     # - name: Install Cowsay Program
     #   run: sudo apt install cowsay -y
