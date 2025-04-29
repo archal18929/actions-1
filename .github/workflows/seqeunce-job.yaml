@@ -1,6 +1,5 @@
 name: Sequence Job
 
-<<<<<<< HEAD
 on: push
 
 jobs: 
