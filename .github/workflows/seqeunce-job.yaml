@@ -1,0 +1,35 @@
+name: Sequence Job
+
+on: push
+
+jobs: 
+  build_job_1:
+    runs-on: ubuntu-latest
+        
+    steps: 
+    - name: Install Cowsay
+      run: sudo apt install cowsay -y
+
+    - name: Run Cowsay
+      run: cowsay -f poop "Run for cover, I am a POOP...pweeet" >> poop.txt
+
+    - name: Sleep 30
+      run: sleep 30
+
+  test_job_2: 
+    runs-on: ubuntu-latest
+
+    steps: 
+    - name: Sleep 10
+      run: sleep 10
+
+    - name: Test file exist
+      run: grep -i "poop" poop.txt
+
+  deploy_job_3: 
+    runs-on: ubuntu-latest
+
+    steps: 
+    - name: Read file
+      run: cat poop.txt
+
