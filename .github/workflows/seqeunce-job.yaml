@@ -1,5 +1,6 @@
 name: Sequence Job
 
+<<<<<<< HEAD
 on: push
 
 jobs: 
@@ -11,7 +12,7 @@ jobs:
       run: sudo apt install cowsay -y
 
     - name: Run Cowsay
-      run: cowsay -f poop "Run for cover, I am a POOP...pweeet" >> poop.txt
+      run: cowsay -f dog "Run, I am a DOG... AWWWWW" >> dog.txt
 
     - name: Sleep 30
       run: sleep 30
@@ -24,12 +25,14 @@ jobs:
       run: sleep 10
 
     - name: Test file exist
-      run: grep -i "poop" poop.txt
+      run: grep -i "dog" dog.txt
 
   deploy_job_3: 
     runs-on: ubuntu-latest
 
     steps: 
     - name: Read file
-      run: cat poop.txt
+      run: cat dog.txt
 
+    - name: Deploy
+      run: echo "deploying..."
